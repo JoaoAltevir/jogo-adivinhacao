@@ -1,4 +1,4 @@
-let ALEATORIO = Math.floor(Math.random() * 100 + 1)
+let ALEATORIO = Math.floor(Math.random() * 200 + 1)
 //geração do número aleatório
 let entrada_usuario = "";
 let tentativas = 0;
