@@ -4,7 +4,7 @@ let entrada_usuario = "";
 let tentativas = 0;
 let opcao;
 
-console.log("Adivinhe qual número eu estou pensando!\nEstou pensando em um número entre 1 e 100, você tem apenas 10 tentativas!")
+console.log("Adivinhe qual número eu estou pensando!\nEstou pensando em um número entre 1 e 200, você tem apenas 10 tentativas!")
 process.stdin.on("data", function (data){
     entrada_usuario = Number(data.toString().trim()); //usuário digitando o número dentro do programa
     let diferenca = Math.abs(ALEATORIO - entrada_usuario)
@@ -14,7 +14,7 @@ process.stdin.on("data", function (data){
     }
     if(tentativas == 5){
         console.log("Como você errou 5 vezes seguidas... SEU NÚMERO MUDOU, o número anterior era ", ALEATORIO);
-        ALEATORIO = Math.floor(Math.random() * 100 + 1)
+        ALEATORIO = Math.floor(Math.random() * 200 + 1)
     }if(entrada_usuario == ALEATORIO){ //teste caso acerte
         console.log("Boa! você acertou!")
         process.exit()
